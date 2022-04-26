@@ -1,0 +1,74 @@
+div.custom-nice-select {
+  position: relative;
+  cursor: pointer;
+  z-index: 4;
+
+  div.selected {
+    background: white;
+  }
+
+  div.options-list {
+    position: absolute;
+    top: 100%;
+    background: white;
+    display: none;
+
+    .option {
+
+      &.option-selected {
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Default Style
+  &.style-default {
+
+    // Selected
+    div.selected {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #ededed;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      i.cs-arrow-down {
+        position: relative;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 4px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-top: -2px;
+      }
+    }
+
+    // Dropdown
+    div.options-list {
+      background: white;
+      border: 1px solid #ededed;
+      border-radius: 5px;
+      font-size: 90%;
+      width: 100%;
+
+      // Options
+      div.option {
+        padding: 10px 15px;
+        line-height: initial;
+
+        &:first-child {
+          padding-top: 20px;
+        }
+
+        &:last-child {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+  }
+
+}
